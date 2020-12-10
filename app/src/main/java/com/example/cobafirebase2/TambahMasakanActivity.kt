@@ -1,8 +1,8 @@
 package com.example.cobafirebase2
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_tambah_masakan.*
 
@@ -49,7 +49,7 @@ class TambahMasakanActivity : AppCompatActivity() {
 
             ref.child(masakanID).setValue(masakanfinal).addOnCompleteListener{
                 Toast.makeText(
-                    baseContext, "berhasil Ges, Kuy Valorant",
+                    baseContext, "Data Tersimpan.",
                     Toast.LENGTH_SHORT
                 ).show()
             }

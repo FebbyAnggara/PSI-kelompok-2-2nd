@@ -6,16 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".UserHomeActivity">
 
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_usermain"
+    <ListView
+        android:id="@+id/lv_msk"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

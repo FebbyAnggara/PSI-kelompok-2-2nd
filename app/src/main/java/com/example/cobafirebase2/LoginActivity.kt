@@ -1,11 +1,10 @@
 package com.example.cobafirebase2
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_login.*
@@ -48,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
             }
         } else {
             Toast.makeText(
-                baseContext, "Login Failed, salah email/password atau belum daftar kali.",
+                baseContext, "Login Failed, salah email/password atau belum daftar.",
                 Toast.LENGTH_SHORT
             ).show()
         }
@@ -86,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
                     ).show()
                 } else {
                     Toast.makeText(
-                        baseContext, "Sign in failed, anda termasuk golongan pemuda tersesat.",
+                        baseContext, "Sign in failed.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
