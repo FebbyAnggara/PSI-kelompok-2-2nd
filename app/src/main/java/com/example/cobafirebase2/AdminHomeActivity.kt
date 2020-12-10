@@ -1,11 +1,15 @@
 package com.example.cobafirebase2
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_admin_home.*
+import kotlinx.android.synthetic.main.activity_show_item.*
+import kotlinx.android.synthetic.main.item_msk.*
+
 
 class AdminHomeActivity : AppCompatActivity() {
     private lateinit var mskList : MutableList<Masakan>
@@ -21,7 +25,7 @@ class AdminHomeActivity : AppCompatActivity() {
         listMsk = findViewById(R.id.lv_msk)
 
         float_btn_add.setOnClickListener{
-            startActivity(Intent(this,TambahMasakanActivity::class.java))
+            startActivity(Intent(this, TambahMasakanActivity::class.java))
         }
         mskList = mutableListOf()
 
@@ -45,6 +49,23 @@ class AdminHomeActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
 
+        })
+        // ListView on item selected listener.
+        // ListView on item selected listener.
+        listMsk.setOnItemClickListener(OnItemClickListener { parent, view, position, id -> // TODO Auto-generated method stub
+
+            // Getting listview click value into String variable.
+            val nama: String = tv_nama.text.toString()
+            val bahan: String = tv_bahan.text.toString()
+            val resep: String = tv_resep.text.toString()
+            val intent = Intent(this@AdminHomeActivity, ShowItem::class.java)
+
+            // Sending value to another activity using intent.
+            intent.putExtra("nama", nama)
+            intent.putExtra("bahan", bahan)
+            intent.putExtra("resep", resep)
+
+            startActivity(intent)
         })
 
     }

@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn_next.setOnClickListener {
-            Intent(this,LoginActivity::class.java).also{
+            Intent(this,AdminHomeActivity::class.java).also{
                 startActivity(it)
             }
         }
